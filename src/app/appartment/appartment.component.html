@@ -1,0 +1,15 @@
+<table class="table">
+    <tr>
+        <th>appartNum</th>
+        <th>floorNum</th>
+        <th>surface</th>
+        <th>terrace</th>
+    </tr>
+    <tr *ngFor="let A of list">
+        <td>{{A.appartNum}}</td>
+        <td>{{A.floorNum}}</td>
+        <td>{{A.surface}}</td>
+        <td>{{A.terrace}}</td>
+        <td> <button class="btn btn-succes" (click)="likeApp(A.id)">Like</button></td>
+    </tr>
+</table>

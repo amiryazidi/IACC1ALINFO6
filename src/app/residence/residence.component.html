@@ -1,0 +1,10 @@
+<p>residence works!</p>
+
+
+<ul *ngFor="let residence of listResidences , let i=index">
+    <li>
+        {{residence.id}} {{residence.name}} {{residence.address}}
+        <button class="btn btn-info" [routerLink]="['/showApparts',residence.id]">show</button>
+    </li>
+
+</ul>

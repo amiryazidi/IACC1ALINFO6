@@ -1,0 +1,35 @@
+<p>home works!</p>
+
+{{title|uppercase}}
+
+
+<input type="submit" value="event" (click)="sayHello()">
+
+<br>
+<input type="text" [(ngModel)]="color">
+<div [style.backgroundColor]="color">
+    Hello
+</div>
+
+<input type="number" [(ngModel)]="price">
+<table class="table" border="2">
+    <tr>
+        <th>Id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>quantity</th>
+        <th>like</th>
+    </tr>
+    <tr *ngFor="let i of listProduct, let p=index">
+        <ng-container *ngIf="i.price>price ||price==null">
+            <td>{{i.id}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.quantity}}</td>
+            <td>{{i.like}}</td>
+            <button class="btn btn-primary" (click)="incrementLike(p)"> like</button>
+            <button class="btn btn-secondary" (click)="buy(p)" [disabled]=" i.quantity==0 "> buy</button>
+            <button class="btn btn-info" [routerLink]="['/product',i.id]">Detail</button>
+        </ng-container>
+    </tr>
+</table>

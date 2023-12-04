@@ -1,0 +1,38 @@
+<label>Login</label>
+<input class="form-control" type="text" placeholder="login" [formControl]="login">
+
+<label>Password</label>
+<input class="form-control" type="text" placeholder="password" [formControl]="pwd">
+<input type="submit" [disabled]="login.invalid || pwd.invalid" (click)="showLogin()">
+<br>
+<h2>FormGroup</h2>
+<form [formGroup]="registerForm">
+
+    <label>FirstName</label>
+    <input class="form-control" type="text" placeholder="FirstName" formControlName="fn">
+    <div class="alert alert-danger" *ngIf="registerForm.controls['fn'].invalid && registerForm.controls['fn'].touched">
+        <div *ngIf="registerForm.controls['fn'].hasError('required')">
+            the first name is a required field
+        </div>
+        <div *ngIf="registerForm.controls['fn'].hasError('minlength')">
+            minLenght 3
+        </div>
+    </div>
+    <label>LastName</label>
+    <input class=" form-control " type="text " placeholder="LastName " formControlName="ln">
+    <div class="alert alert-danger" *ngIf="registerForm.controls['ln'].invalid && registerForm.controls['ln'].touched">
+        <div *ngIf="registerForm.controls['ln'].hasError('required')">
+            the last name is a required field
+        </div>
+        <div *ngIf="registerForm.controls['ln'].hasError('pattern')">
+            last name doit etre chaine de caracteres
+        </div>
+    </div>
+    <label>adress</label>
+    <input class="form-control" type="text " placeholder="adress " formControlName="ad">
+    <div class="alert alert-danger" *ngIf="registerForm.get('ad')?.invalid && registerForm.controls['ad'].touched">
+        the addres name is a required field
+    </div>
+    <input class="btn btn-info " type="submit " value="save" [disabled]="registerForm.invalid">
+    <input class="btn btn-warning " type="submit " value="cancel" (click)="reset() ">
+</form>
