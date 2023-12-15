@@ -15,7 +15,7 @@ export class ReactiveComponent {
     {
     fn:new FormControl('',[Validators.required,Validators.minLength(3)]),
     ln:new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z]*')]),
-    ad:new FormControl('',Validators.required),
+    ad:new FormControl(''),
   }
   )
   reset(){

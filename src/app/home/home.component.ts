@@ -10,7 +10,7 @@ export class HomeComponent {
 
   title:string='welcome';
   color='red';
-  price!:number;
+  price:number=5;
   listProduct:Product[]=[
     {id:1,title:'produit1',price:20,quantity:5,like:10,image:""},
     {id:2,title:'produit2',price:40,quantity:0,like:0,image:''},

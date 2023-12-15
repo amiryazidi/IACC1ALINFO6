@@ -14,6 +14,7 @@ import { ReactiveComponent } from './reactive/reactive.component';
 import { PhoneComponent } from './phone/phone.component';
 import { TvComponent } from './tv/tv.component';
 import { ShowOneProductComponent } from './show-one-product/show-one-product.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ShowOneProductComponent } from './show-one-product/show-one-product.com
     ReactiveComponent,
     PhoneComponent,
     TvComponent,
-    ShowOneProductComponent
+    ShowOneProductComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

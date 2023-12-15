@@ -10,8 +10,10 @@
 <div [style.backgroundColor]="color">
     Hello
 </div>
-
 <input type="number" [(ngModel)]="price">
+<h1>Products</h1><br>
+<button class="btn btn-warning" [routerLink]="['/Addproduct']">Add</button>
+
 <table class="table" border="2">
     <tr>
         <th>Id</th>
@@ -30,6 +32,8 @@
             <button class="btn btn-primary" (click)="incrementLike(p)"> like</button>
             <button class="btn btn-secondary" (click)="buy(p)" [disabled]=" i.quantity==0 "> buy</button>
             <button class="btn btn-info" [routerLink]="['/product',i.id]">Detail</button>
+
+
         </ng-container>
     </tr>
 </table>
