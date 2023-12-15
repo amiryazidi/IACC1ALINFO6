@@ -11,6 +11,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { AppartmentComponent } from './appartment/appartment.component';
 import { ReactiveComponent } from './reactive/reactive.component';
+import { PhoneComponent } from './phone/phone.component';
+import { TvComponent } from './tv/tv.component';
+import { ShowOneProductComponent } from './show-one-product/show-one-product.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ReactiveComponent } from './reactive/reactive.component';
     NotFoundComponent,
     DetailProductComponent,
     AppartmentComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    PhoneComponent,
+    TvComponent,
+    ShowOneProductComponent
   ],
   imports: [
     BrowserModule,

@@ -12,9 +12,9 @@ export class HomeComponent {
   color='red';
   price!:number;
   listProduct:Product[]=[
-    {id:1,title:'produit1',price:20,quantity:5,like:10},
-    {id:2,title:'produit2',price:40,quantity:0,like:0},
-    {id:3,title:'produit3',price:10,quantity:10,like:5},
+    {id:1,title:'produit1',price:20,quantity:5,like:10,image:""},
+    {id:2,title:'produit2',price:40,quantity:0,like:0,image:''},
+    {id:3,title:'produit3',price:10,quantity:10,like:5,image:''},
   ]
 
     sayHello(){

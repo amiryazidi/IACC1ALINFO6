@@ -35,3 +35,4 @@ export class ReactiveComponent {
       ad:['',Validators.required]});
 
     }
+  }
