@@ -52,6 +52,6 @@
 
 
 
-    <button type="submit" [disabled]="registerForm.invalid" class="btn btn-success">submit</button>
+    <button type="submit" [disabled]="registerForm.invalid" class="btn btn-success" (click)="ajouter()">submit</button>
     <button type="submit" (click)="reset()" class="btn btn-warning">Cancel</button>
 </form>

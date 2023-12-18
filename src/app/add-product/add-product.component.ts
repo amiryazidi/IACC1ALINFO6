@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProductService } from '../services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product',
@@ -11,7 +13,7 @@ export class AddProductComponent {
 
   registerForm!: FormGroup;
   formbuilder:any;
-  constructor(private fb:FormBuilder){
+  constructor(private fb:FormBuilder,private Ps:ProductService,private rout:Router){
 
   }
   ngOnInit(){
@@ -31,6 +33,11 @@ export class AddProductComponent {
 
   reset(){
     this.registerForm.reset();
+  }
+
+  ajouter(){
+    this.Ps.addProduct(this.registerForm.value)
+    this.rout.navigateByUrl('/product')
   }
 
 
