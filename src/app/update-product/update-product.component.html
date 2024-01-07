@@ -1,3 +1,4 @@
+<p>update-product works!</p>
 <h1>reactive-form</h1>
 
 <form [formGroup]="registerForm">
@@ -52,6 +53,6 @@
 
 
 
-    <button type="submit" [disabled]="registerForm.invalid" class="btn btn-success" (click)="ajouter()">submit</button>
+    <button type="submit" [disabled]="registerForm.invalid" class="btn btn-success" (click)="update()">update</button>
     <button type="submit" (click)="reset()" class="btn btn-warning">Cancel</button>
 </form>

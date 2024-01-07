@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { Product } from '../model/product';
+import { ConsumerProductService } from '../services/consumer-product.service';
 
 @Component({
   selector: 'app-detail-product',
@@ -10,12 +11,15 @@ import { Product } from '../model/product';
 })
 export class DetailProductComponent {
   id!:number
-  product!:Product[]
-  constructor(private route:ActivatedRoute,private Ps:ProductService){}
+  product!:Product
+  constructor(private route:ActivatedRoute,private Ps:ProductService,private con:ConsumerProductService){}
 
   ngOnInit(){
     this.id=this.route.snapshot.params['id'];
-    this.product=this.Ps.listProduct
+   // this.product=this.Ps.listProduct
+   this.con.getProductById(this.id).subscribe(
+    (data)=>this.product=data
+   )
 
   }
 

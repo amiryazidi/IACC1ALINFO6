@@ -11,6 +11,9 @@
     Hello
 </div>
 <input type="number" [(ngModel)]="price">
+
+<button class="alert alert-secondary" (click)="getAlertStock()">Alert</button>
+<h1>{{stock}}</h1>
 <h1>Products</h1><br>
 <button class="btn btn-warning" [routerLink]="['/Addproduct']">Add</button>
 
@@ -30,8 +33,10 @@
             <td>{{i.quantity}}</td>
             <td>{{i.like}}</td>
             <button class="btn btn-primary" (click)="incrementLike(p)"> like</button>
+            <button class="btn btn-danger" (click)="delete(i.id)"> delete</button>
             <button class="btn btn-secondary" (click)="buy(p)" [disabled]=" i.quantity==0 "> buy</button>
             <button class="btn btn-info" [routerLink]="['/product',i.id]">Detail</button>
+            <button class="btn btn-info" [routerLink]="['/update',i.id]">update</button>
 
 
         </ng-container>

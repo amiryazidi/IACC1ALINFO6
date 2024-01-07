@@ -9,6 +9,7 @@ import { ReactiveComponent } from './reactive/reactive.component';
 import { TvComponent } from './tv/tv.component';
 import { PhoneComponent } from './phone/phone.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 const routes: Routes = [
   {path:'product',component:HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'tv',component:TvComponent},
   {path:'phone',component:PhoneComponent},
   {path:'product/:id',component:DetailProductComponent},
+  {path:'update/:id',component:UpdateProductComponent},
   {path:'showApparts/:id',component:AppartmentComponent},
   {path:'Addproduct',component:AddProductComponent},
   {path:'**',component:NotFoundComponent},
